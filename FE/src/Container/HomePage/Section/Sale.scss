@@ -1,0 +1,30 @@
+.Sale{
+   border-radius: 10px;
+    margin: 20px auto;
+    width: 1150px;
+    background-image: linear-gradient(to right, #93291e, #ed213a);
+    height: 350px;
+
+    .headerSale{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80px;
+      
+        position: relative;
+
+
+        .titleSale{
+            background: url(../../../assets/Sale/flash-sale-moi-ngay.png);
+            height:70% ;
+            width: 525px;
+            
+        }
+        .countDownSale{
+            position: absolute;
+            right: 40px;
+            top:20%;
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,49 @@
+.OutStandingPhone{
+    margin: 0 auto;
+    width: 1150px;
+    padding-top: 20px;
+
+
+    .menu-header-OutStandingPhone{
+        display: flex;
+        justify-content: space-between;
+        height: 50px;
+
+
+        .header-OutStandingPhone-title{
+            width: 60%;
+           
+            p{
+                font-size: 18px;
+                font-weight: bold;
+                color: white;
+                background: black;
+                width: fit-content;
+                padding: 10px 15px;
+                border-radius: 10px;
+                text-align: left;
+                margin-top: -2px;
+            }
+        }
+
+        .header-OutStandingPhone-scroll {
+            max-width: 530px ;
+            overflow-x: scroll;
+            white-space: nowrap;
+            float: right;
+            
+            a{
+                text-decoration: none;
+                font-size: 15px;
+                color: black;
+                border-radius: 5px;
+                border: 1px solid black;
+                padding: 3px 5px;
+                margin: 0 5px;
+                display: inline-block;
+                background-color: grey;
+            }
+            
+        }
+    }
+}

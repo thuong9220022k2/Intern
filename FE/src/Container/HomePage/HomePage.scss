@@ -1,0 +1,16 @@
+.homePage-container{
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1150px;
+    text-align: center;
+
+    .contact{
+        position: fixed;
+        right: 0;
+        background-color: #f0f0f0;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        z-index: 100;
+        bottom: 15px;
+    }
+}

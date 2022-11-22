@@ -1,0 +1,68 @@
+.bodyApple{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1150px;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 10px 0px;
+
+    .card{
+        background-color: #ccc;
+        height: 280px;
+        margin: 0 5px;
+        border-radius: 10px;
+        width: 200px;
+        border: 1px solid black;
+        cursor: pointer;
+        
+       
+        .card-top{
+            margin-top: 5px;
+            height: 80%;
+            width: 100%;
+            margin-bottom: 5px;
+    
+            .card-img{
+                height: 75%;
+                width: 70%;
+                margin: 0 auto;
+                object-fit: cover;
+                text-align: center;
+                border-radius:10px ;
+                display: flex;
+    
+            }
+            .card-title{
+                margin-top: 5px;
+                text-align: left;
+                font-size:15px ;
+                font-weight: bold;
+                padding: 0 15px;
+            }
+        }
+    
+        .card-bottom{
+            padding: 0 15px;
+            
+            .card-price{
+                display: flex;
+    
+                .card-price-sale{
+                    font-size: 14px;
+                    font-weight: bold;
+                    color: red;
+                    margin: 0 5px 0px 0px;
+                }
+                .card-price-real{
+                    font-size: 14px;
+                    font-weight: bold;
+                    color: grey;
+                    margin: 0 0 0 5px;
+                    text-decoration: line-through;
+                    
+                }
+            }
+        }
+    }
+}

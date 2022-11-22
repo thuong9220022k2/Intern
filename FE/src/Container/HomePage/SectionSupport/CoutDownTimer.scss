@@ -1,0 +1,41 @@
+.countdown-wrapper{
+    display: flex;
+    color: #ffff;
+    justify-content: space-around;
+    width: 150px;
+    gap: 10px;
+
+
+    .countdown-item{
+        display: block;
+        
+        width: 85px;
+
+
+        .countdown-item-des{
+            font-size: 15px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        .countdown-item-time{
+
+            .item-detail{
+                display: flex;
+                justify-content: space-around;
+
+                span{
+                    padding: 3px 8px;
+                    background-color: #ffff;
+                    border-radius: 5px;
+                    color: red;
+                    font-size: 20px;
+                    font-weight: bold;
+                    margin: 0 2px;
+                }
+                
+            }
+        }
+    }
+}

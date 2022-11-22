@@ -1,0 +1,179 @@
+.footer{
+    padding-top:15px ;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(252, 229, 229);
+    width: 100%;
+    
+    .home-footer{
+        display: flex;
+        width: 1150px;
+        
+        gap: 5px;
+    
+    
+        .footer-policy{
+            flex:1;
+            
+            box-sizing: border-box;
+            
+            ul {
+                margin-right: 50px;
+                margin-left: -10px;
+                margin-top: -1px;
+                list-style: none;
+
+                li{
+                    font-size: 12px;
+                    padding: 3px 0;
+                }
+            }
+
+            
+    
+    
+        }
+        .footer-support{
+            flex: 1;
+           
+            line-height: 0px;
+            padding-top: 4px;
+            span{
+                font-size: 13px;
+                font-weight: bold;
+            }
+
+            ul{
+                list-style: none;
+                margin-right: 50px;
+                margin-left: -40px;
+
+                li{
+                    p{
+                        font-size: 13px;
+                    }
+                }
+            }
+            .footer-service{
+                background-color: yellow;
+                padding: 5px;
+                border-radius: 5px;
+                line-height: 6px;
+                
+                p{
+                    font-size: 15px;
+                }
+
+                h2{
+                    font-weight: bold;
+                    color: red;
+                   
+                    
+                }
+            }
+    
+        }
+    
+        .footer-addrress{
+            flex: 1;
+           
+
+            .footer-region{
+                width: 100%;
+                
+                ul{
+                    list-style: none;
+                    display: flex;
+                    width: 100%;
+                    margin: 0;
+                    padding: 0;
+                    gap: 10px;
+
+                    li{
+                        border: 1px solid black;
+                        line-height: 2px;
+                        width: fit-content;
+                        outline: 0;
+                        height: 40px;
+                        padding: 0 5px;
+                        border-radius: 5px;
+                        background: rgb(241, 235, 235);
+                        cursor: pointer;
+
+                        p{
+                           margin-top: 8px;
+                            font-size: 14px;
+                        }
+                        
+                        h5{
+                            margin-top: 3px;
+                            font-size: 16px;
+                            width: fit-content;
+                        }
+                    }
+                        
+
+                        
+                }
+
+                
+            }
+
+            .addrress{
+                margin-top: -8px;
+                .north-addrress{
+
+                    ul{
+                        overflow: hidden;
+                        margin-left: -13px;
+                        margin-right: 10px;
+                        
+                        li{
+                            height: 25px;
+                            line-height: 3px;
+                            font-size: 14px;
+
+                            span{
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .footer-image{
+            flex: 1;
+
+            .footer-image-icon{
+                display: flex;
+                justify-content: flex-start;
+                gap: 10px;
+
+                .image-icon{
+                    gap: 5px;
+
+                    i{
+                        padding: 0 5px;
+                    }
+
+                }
+                .facebook{
+                    color: blue;
+
+                }
+                .youtube{
+                    color: red;
+                }
+            }
+            .image{
+                display: flex;
+                margin-top: 10px;
+                gap: 10px;
+
+            }
+        }
+    
+    
+    
+    }
+}
