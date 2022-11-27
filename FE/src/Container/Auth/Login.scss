@@ -6,7 +6,7 @@
 
     .login-container{
         background-color: white;
-        width: 400px;
+        width: 350px;
         height: 100%;
         margin: 0 auto;
         border-radius: 10px;
@@ -26,19 +26,33 @@
                 font-weight: 600;
                 font-size: 24px;
                 padding-top: 10px;
+                padding-bottom: 10px;
                 
             }
 
             .login-input{
                 margin: 7px 0;
+                display: flex;
+                align-items: center;
+                
+                label{
+                    width: 80px;
+                }
+                .form-control{
+                    width: 200px;
+                }
 
                 .custom-input-password{
                     position: relative;
+
+                    .form-control{
+                        width: 200px;
+                    }
                      
-                    i{
+                    .custom-icon{
                         position: absolute;
-                        right: 5px;
-                        top: 10px;
+                        right: -30px;
+                        top: 20%;
                         cursor: pointer;
                     }
                 }
@@ -56,6 +70,7 @@
                 background: linear-gradient(135deg, rgba(34,193,195,1) 0%,     rgba(253,187,45,1) 100%);
                 color: #ffff;
                 font-size: 16px;
+                cursor: pointer;
             }
             .forgot-password{
                 font-size: 12px;
@@ -78,6 +93,7 @@
                     align-items: center;
                     color: #ffff;
                     margin-right:10px ;
+                    cursor: pointer;
                 }
 
                 .facebook{
@@ -91,6 +107,7 @@
                     align-items: center;
                     color: #ffff;
                     margin-left: 10px;
+                    cursor: pointer;
                 }
             }
         }

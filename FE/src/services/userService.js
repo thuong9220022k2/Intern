@@ -1,9 +1,7 @@
 import axios from "../axios"
 
-const handleLoginApi = async(data)=>{
-    return axios.post("/api/login",{data})
+const handleLoginApi = (email,password)=>{
+    return axios.post("/api/login",{email,password})
 }
 
-module.export = {
-    handleLoginApi : handleLoginApi
-}
+export { handleLoginApi }

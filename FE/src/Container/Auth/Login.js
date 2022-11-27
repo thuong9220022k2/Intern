@@ -3,13 +3,13 @@ import { connect } from 'react-redux';
 import { push } from "connected-react-router";
 import * as actions from "../../store/actions";
 import './Login.scss';
-import { handleLoginApi } from '../../services/userService'
+import { handleLoginApi } from "../../services/userService"
 
 class Login extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            username:'',
+            email:'',
             password:'',
             isShowPassword:false,
             errMessage :''
@@ -18,7 +18,7 @@ class Login extends Component {
 
     handleOnChangeUsername = (event)=>{
         this.setState({
-            username:event.target.value
+           email:event.target.value
         })
     } 
 
@@ -33,7 +33,7 @@ class Login extends Component {
             errMessage:''
         })
         try {
-            let data = await handleLoginApi(this.state.username,this.state.password);
+            let data = await handleLoginApi(this.state.email,this.state.password);
             if(data && data.errCode !==0){
                 this.setState({
                     errMessage: data.message
@@ -57,10 +57,11 @@ class Login extends Component {
 
     }
     handleShowHidePassword = ()=>{
-        this.setState=({
-            isShowPassword:!this.state.isShowPassword
+        this.setState({
+            isShowPassword : !this.state.isShowPassword
         })
-
+        console.log(this.state.isShowPassword);
+        console.log("oke");
     }
     render() {
         //JSX
@@ -68,8 +69,8 @@ class Login extends Component {
             <div className="login-background">
                 <div className="login-container">
                     <div className='login-content row'>
-                        <div className='col-12 text-login'>Login</div>
-                        <div className='col-12 form-group login-input'>
+                        <div className=' text-login'>Login</div>
+                        <div className=' form-group login-input'>
                             <label>Username</label>
                             <input
                              type='text' 
@@ -79,7 +80,7 @@ class Login extends Component {
                              onChange={
                                 this.handleOnChangeUsername}/>
                         </div>
-                        <div className='col-12 form-group login-input'>
+                        <div className='form-group login-input'>
                             <label>Password</label>
                             <div className='custom-input-password'>
                                <input 
@@ -89,16 +90,17 @@ class Login extends Component {
                                    value={this.state.password}
                                    onChange={
                                        this.handleOnChangePassword}/> 
-                                <span onClick={
+
+                                <span className="custom-icon" onClick={
                                     this.handleShowHidePassword}>
-                                   <i class={this.state.isShowPassword ? 'far fa-eye' :'far fa-eye-slash'}></i>
+                                   <i class={this.state.isShowPassword ? 'fa fa-eye' :'fa fa-eye-slash'}></i>
                                 </span>
                             </div>
                         </div>
                         <div className='col-12' style={{ color : 'red' }}>
                             {this.state.errMessage }
                         </div>
-                        <div className='col-12 '>
+                        <div className='col-12'>
                             <button 
                             className='btn-login'
                             onClick={()=>{
@@ -108,12 +110,12 @@ class Login extends Component {
                         <div className='col-12'>
                             <a href="/Register-user" className='forgot-password'>Forget your password</a>
                         </div>
-                        <div className='col-12 text-center mt-3'>
+                        <div className=' text-center mt-3'>
                             <span className='text-other-login'>Or Login with</span>
                         </div>
                         <div className='col-12 social-login'>
-                           <i class="fab fa-google-plus-g google"></i>
-                           <i class="fab fa-facebook-f facebook"></i>
+                           <i className="fa fa-google google" aria-hidden="true"></i>
+                           <i className="fa fa-facebook facebook" aria-hidden="true"></i>
                         </div>
                     </div>
                 </div>
@@ -122,17 +124,17 @@ class Login extends Component {
     }
 }
 
-const mapStateToProps = state => {
-    return {
-        language: state.app.language
-    };
-};
+// const mapStateToProps = state => {
+//     return {
+//         language: state.app.language
+//     };
+// }
 
-const mapDispatchToProps = dispatch => {
-    return {
-        navigate: (path) => dispatch(push(path)),
-        userLoginSuccess : (userInfo) => dispatch(actions.userLoginSuccess(userInfo))
-    };
-};
+// const mapDispatchToProps = dispatch => {
+//     return {
+//         navigate: (path) => dispatch(push(path)),
+//         userLoginSuccess : (userInfo) => dispatch(actions.userLoginSuccess(userInfo))
+//     };
+// };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Login);
+export default Login;
